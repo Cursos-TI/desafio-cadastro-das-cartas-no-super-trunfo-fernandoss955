@@ -118,6 +118,10 @@ int main(){
     printf("Pontos turísticos: %s VICTORY\n", (pontosturisticos1 > pontosturisticos2) ? codigo1 : codigo2);
     printf("Hadouken: %s VICTORY\n", (Hadouken1 >  Hadouken2 ? codigo1 : codigo2));
 
-    return 0;
+  }
+
+    
+  
+
     
     

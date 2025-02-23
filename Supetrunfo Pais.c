@@ -18,6 +18,8 @@ int main(){
     int pontosturisticos1;      int pontosturisticos2;
     double Hadouken1;          double Hadouken2;
     
+    // munu de opções
+    
     printf("\n");
     printf("menu principal\n");
     printf("1: iniciar jogo\n");
@@ -26,7 +28,6 @@ int main(){
     printf(" escolha uma opcao\n");
     scanf ("%d", &opcao);
     
-
     switch (opcao){
     case 1:
     printf("voce escolheu a opcao 1:\n");

@@ -18,7 +18,7 @@ int main(){
     int pontosturisticos1;      int pontosturisticos2;
     double Hadouken1;          double Hadouken2;
     
-    // munu de opções
+    // munu de opções//
     
     printf("\n");
     printf("menu principal\n");

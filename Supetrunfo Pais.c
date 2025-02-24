@@ -3,126 +3,126 @@
 #include <time.h>
 
 int main(){
-    // Jogo Super trunfo((PAISES))
-    
+    // Jogo Super Trunfo (PAISES)
+
     printf("BEM VINDOS AO MEU GAME - SUPER TRUNFO.... BOM JOGO \n");
-    
+
     int opcao;
-    char pais1[10];              char pais2[10];
-    char codigo1[10];           char codigo2[10];
-    char estado1[5];            char estado2[5];
-    char cidade1[10];           char cidade2[10];
-    float area1;                float area2;
-    int populacao1;             int populacao2;
-    float PIB1;                 float PIB2;
-    int pontosturisticos1;      int pontosturisticos2;
-    double Hadouken1;          double Hadouken2;
-    
-    // munu de opções//
-    
+    char pais1[10], pais2[10];
+    char codigo1[10], codigo2[10];
+    char estado1[5], estado2[5];
+    char cidade1[10], cidade2[10];
+    float area1, area2;
+    int populacao1, populacao2;
+    float PIB1, PIB2;
+    int pontosturisticos1, pontosturisticos2;
+    double Hadouken1, Hadouken2;
+
+    // Menu de opções
     printf("\n");
-    printf("menu principal\n");
+    printf("Menu principal\n");
     printf("1: iniciar jogo\n");
     printf("2: ver regras\n");
     printf("3: sair\n");
-    printf(" escolha uma opcao\n");
-    scanf ("%d", &opcao);
-    
+    printf("Escolha uma opcao: ");
+    scanf("%d", &opcao);
+
     switch (opcao){
-    case 1:
-    printf("voce escolheu a opcao 1:\n");
-      break;
-    case 2:
-    printf(" voce escolheu a opcao 2:\n");
-    case 3:
-      printf("sair do menu...\n");
-    break;
-    default:
-      printf("opcao invalida\n");
+        case 1:
+            printf("Você escolheu a opção 1:\n");
+            break;
+        case 2:
+            printf("Você escolheu a opção 2:\n");
+            printf("cada jogador vai cadastrar uma carta,\n");
+            printf("no final do cadastro o jogo ira comparar\n");
+            printf("o poder de cada carta, vende a carta com maior poder...\n");
+            break;
+        case 3:
+            printf("Saindo do menu...\n");
+            return 0;
+        default:
+            printf("Opção inválida\n");
+            return 0;
     }
 
-    printf("PLAYER 1\n");
-    printf("\n");
-    printf("Digite o codigo da Primeira carta: \n");
-    scanf("%s", &codigo1);
-    printf(" Digite o pais\n");
-    scanf(" %[^\n]", &pais1);
-    printf("Digite o estado: \n");
-    scanf("%s", &estado1);
-    printf("Digite a cidade: \n");
+    // Entradas do Jogador 1
+    printf("\nPLAYER 1\n");
+    printf("Digite o código da Primeira carta: ");
+    scanf("%s", codigo1);
+    printf("Digite o país: ");
+    scanf(" %[^\n]", pais1);
+    printf("Digite o estado: ");
+    scanf("%s", estado1);
+    printf("Digite a cidade: ");
     scanf(" %[^\n]", cidade1);
-    printf("Digite a area [km²]: \n");
+    printf("Digite a área [km²]: ");
     scanf("%f", &area1);
-    printf("Digite a populacao: \n");
+    printf("Digite a população: ");
     scanf("%d", &populacao1);
-    printf("Digite o PIB: \n");
+    printf("Digite o PIB: ");
     scanf("%f", &PIB1);
-    printf("Digite os pontos turisticos: \n");
+    printf("Digite os pontos turísticos: ");
     scanf("%d", &pontosturisticos1);
-    printf("\n");// Espaço de uma linha//
-    printf("\n");// Espaço de uma linha//
-    printf("PLAYER 2\n");
-    printf("Digite o Codigo Da Segunda Carta:\n");
-    scanf("%s", &codigo2);
-    printf("Digite o pais\n");
-    scanf(" %[^\n]", &pais2);
-    printf("Digite o Estado:\n");
-    scanf("%s", &estado2);
-    printf("Digite a Cidade:\n");
+
+    // Entradas do Jogador 2
+    printf("\nPLAYER 2\n");
+    printf("Digite o código da Segunda carta: ");
+    scanf("%s", codigo2);
+    printf("Digite o país: ");
+    scanf(" %[^\n]", pais2);
+    printf("Digite o estado: ");
+    scanf("%s", estado2);
+    printf("Digite a cidade: ");
     scanf(" %[^\n]", cidade2);
-    printf("Digite a Area [km²]:\n");
+    printf("Digite a área [km²]: ");
     scanf("%f", &area2);
-    printf("Digite a População:\n");
+    printf("Digite a população: ");
     scanf("%d", &populacao2);
-    printf("Digite o PIB:\n");
+    printf("Digite o PIB: ");
     scanf("%f", &PIB2);
-    printf("Quatidade de Pontos Turisticos:\n");
+    printf("Digite os pontos turísticos: ");
     scanf("%d", &pontosturisticos2);
-    //>>>>>>>>>>>>><<<<<<<<<<<<<//
-    printf("CODIGO DA CARTA:<<<%s>>>\n", codigo1);   
-    printf("NOME DO PAIS: %S\n", pais1);
-    printf("NOME DO ESTADO: %s\n", estado1);
-    printf("NOME DA CIDADE:%s\n", cidade1);            
-    printf("AREA: %f\n", area1);                     
-    printf("NUMERO DE POPULAÇÃO: %d\n", populacao1);
-    printf("PIB: %f\n", PIB1);
-    printf("PONTOS TURISTICOS: %d\n", pontosturisticos1);
-    //>>>>>>>>>>>>><<<<<<<<<<<<<//
-    printf("CODIGO DA CARTA:<<<%s>>>\n", codigo2);
-    printf("NOME DO ESTADO: %S\n , pais2");   
-    printf("NOME DO ESTADO: %s\n", estado2);
-    printf("NOME DA CIDADE:%s\n", cidade2);                
-    printf("AREA: %f\n", area2);                     
-    printf("NUMERO DE POPULAÇÃO: %d\n", populacao2);
-    printf("PIB: %f\n", PIB2);
-    printf("PONTOS TURISTICOS: %d\n", pontosturisticos2);
- 
-      printf("escolha uma opcao\n");
-      printf("codigo da carta\n");
-      printf("estado\n");
-      printf("cidade\n");
-      
-    
+
+    // Cálculo dos atributos Hadouken //
     populacao1 = populacao1 / area1;
     PIB1 = PIB1 / populacao1;
     Hadouken1 = populacao1 + area1 + PIB1 + pontosturisticos1;
 
-    populacao2= populacao2 / area2;
+    populacao2 = populacao2 / area2;
     PIB2 = PIB2 / populacao2;
     Hadouken2 = populacao2 + area2 + PIB2 + pontosturisticos2;
-    
+
+    // Exibição das cartas //
+    printf("\n--- JOGADOR 1 ---\n");
+    printf("CÓDIGO DA CARTA: %s\n", codigo1);   
+    printf("PAÍS: %s\n", pais1);
+    printf("ESTADO: %s\n", estado1);
+    printf("CIDADE: %s\n", cidade1);            
+    printf("ÁREA: %.2f km²\n", area1);                     
+    printf("POPULAÇÃO: %d\n", populacao1);
+    printf("PIB: %.2f\n", PIB1);
+    printf("PONTOS TURÍSTICOS: %d\n", pontosturisticos1);
+
+    printf("\n--- JOGADOR 2 ---\n");
+    printf("CÓDIGO DA CARTA: %s\n", codigo2);   
+    printf("PAÍS: %s\n", pais2);
+    printf("ESTADO: %s\n", estado2);
+    printf("CIDADE: %s\n", cidade2);                
+    printf("ÁREA: %.2f km²\n", area2);                     
+    printf("POPULAÇÃO: %d\n", populacao2);
+    printf("PIB: %.2f\n", PIB2);
+    printf("PONTOS TURÍSTICOS: %d\n", pontosturisticos2);
+
+    // Comparação entre as cartas (determinando quem venceu)
     printf("\nComparação entre %s e %s:\n", codigo1, codigo2);
-    printf("Densidade Populacional: %s VICTORY\n", (populacao1 < populacao2 ? codigo1 : codigo2));
-    printf("População: %s VICTORY\n", (populacao1 > populacao2) ? codigo1 : codigo2);
-    printf("Área: %s VICTORY\n", (area1 > area2) ? codigo1 : codigo2);
-    printf("PIB: %s VICTORY\n", (PIB1 > PIB2) ? codigo1 : codigo2);
-    printf("Pontos turísticos: %s VICTORY\n", (pontosturisticos1 > pontosturisticos2) ? codigo1 : codigo2);
-    printf("Hadouken: %s VICTORY\n", (Hadouken1 >  Hadouken2 ? codigo1 : codigo2));
 
-  }
+    // Comparando e imprimindo quem venceu em cada categoria
+    printf("Densidade Populacional: %s VITÓRIA\n", (populacao1 < populacao2) ? codigo1 : codigo2);
+    printf("População: %s VITÓRIA\n", (populacao1 > populacao2) ? codigo1 : codigo2);
+    printf("Área: %s VITÓRIA\n", (area1 > area2) ? codigo1 : codigo2);
+    printf("PIB: %s VITÓRIA\n", (PIB1 > PIB2) ? codigo1 : codigo2);
+    printf("Pontos Turísticos: %s VITÓRIA\n", (pontosturisticos1 > pontosturisticos2) ? codigo1 : codigo2);
+    printf("Hadouken: %s VITÓRIA\n", (Hadouken1 > Hadouken2) ? codigo1 : codigo2);
 
-    
-  
-
-    
-    
+    return 0;
+}

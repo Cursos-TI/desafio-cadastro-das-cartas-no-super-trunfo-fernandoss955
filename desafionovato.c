@@ -17,14 +17,6 @@ int main(){
     int pontosturisticos1, pontosturisticos2;   
     double Hadouken1, Hadouken2;               
 
-    printf("\n");
-    printf("Menu principal\n");
-    printf("1: iniciar jogo\n");
-    printf("2: ver regras\n");
-    printf("3: sair\n");
-    printf("Escolha uma opcao: ");
-    scanf("%d", &opcao);
-
    
     printf("\nPLAYER 1\n");
     printf("Digite o código da Primeira carta: ");
@@ -61,14 +53,6 @@ int main(){
     scanf("%f", &PIB2);
     printf("Digite os pontos turísticos: ");
     scanf("%d", &pontosturisticos2);
-
-    populacao1 = populacao1 / area1;
-    PIB1 = PIB1 / populacao1;
-    Hadouken1 = populacao1 + area1 + PIB1 + pontosturisticos1;
-
-    populacao2 = populacao2 / area2;
-    PIB2 = PIB2 / populacao2;
-    Hadouken2 = populacao2 + area2 + PIB2 + pontosturisticos2;
 
     printf("\n--- JOGADOR 1 ---\n");
     printf("CÓDIGO DA CARTA: %s\n", codigo1);   
